@@ -42,8 +42,20 @@ const parser = bodyParser.urlencoded({
   })
 
   app.get('/all', parser, (req, res) => {
-    str = "1<hr>2<hr>"
-    res.send(str);
+    str = ""
+    str1 = ""
+    db.all('SELECT * FROM dates', [], (err, rows) => {
+      if (err) {
+        console.error(err.message);
+      }
+      rows.forEach((row) => {
+       // console.log(row);
+        str1 = row.date;
+        str=str+str1+"<hr>"
+        console.log(str);
+      });
+      res.send(str);
+    });
     //toDo : raw text по этому запросу <hr>
   })
 
