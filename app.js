@@ -21,28 +21,27 @@ const parser = bodyParser.urlencoded({
 
 
 
-app.get('/', (req, res) => {
-    
-    res.sendFile(__dirname + "/pages/index.html");
-  })
+
+
+
+
 
   app.get('/', parser, (req, res) => {
-    let postDate = req.body.date;
-    console.log(postDate);
-    //console.log('afsfafas');
     res.sendFile(__dirname + "/pages/index.html");
   })
+  app.get('/all', parser, (req, res) => {
+    res.sendFile(__dirname + "/pages/all.html");
+  })
 
-
-  app.post('/all', parser, (req, res) => {
+  app.post('/', parser, (req, res) => {
     let postDate = req.body.date;
     db.run('INSERT INTO dates (date) VALUES (?)', [postDate], (err) => {
       if (err) {
         console.error(err.message);
       }
       console.log('Данные вставлены.');
-    });
-    res.sendFile(__dirname + "/pages/all.html");
+    });  
+    res.sendFile(__dirname + "/pages/index.html");
   })
 
 
