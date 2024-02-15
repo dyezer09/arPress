@@ -29,9 +29,6 @@ const parser = bodyParser.urlencoded({
   app.get('/', parser, (req, res) => {
     res.sendFile(__dirname + "/pages/index.html");
   })
-  app.get('/all', parser, (req, res) => {
-    res.sendFile(__dirname + "/pages/all.html");
-  })
 
   app.post('/', parser, (req, res) => {
     let postDate = req.body.date;
@@ -44,6 +41,11 @@ const parser = bodyParser.urlencoded({
     res.sendFile(__dirname + "/pages/index.html");
   })
 
+  app.get('/all', parser, (req, res) => {
+    str = "1<hr>2<hr>"
+    res.send(str);
+    //toDo : raw text по этому запросу <hr>
+  })
 
 
 
