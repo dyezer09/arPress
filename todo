@@ -1,8 +1,18 @@
 1) on readme.md not use ru +
-2) add save to database: upper (up) & lower(low) pressure, pulse (p), weight (w)  +
+2) + add save to database: upper (up) & lower(low) pressure, pulse (p), weight (w)  +
 3) show on all page: up/low/p/w +
 
-4) install extentions gitlens, todo highligth to vscode + 
+4) + install extentions gitlens, todo highligth to vscode 
 5) add nodemon to project - 
 
 4) find errors in html code from index.html xz
+
+----
+0) routing: handler this route http://arpress/1-~
+1) rest:  put + delete
+2) prettier + eslint
+
+https://www.linkedin.com/pulse/%25D1%2583%25D0%25BB%25D1%2583%25D1%2587%25D1%2588%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25B5-%25D0%25BA%25D0%25B0%25D1%2587%25D0%25B5%25D1%2581%25D1%2582%25D0%25B2%25D0%25B0-%25D0%25BA%25D0%25BE%25D0%25B4%25D0%25B0-%25D1%2581-prettier-%25D0%25B8-eslint-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D1%258C-1-ilya-pasternak/?trackingId=LSZ8k0GYTPiBBrWH6JDKjw%3D%3D
+https://ru.linkedin.com/pulse/%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0-%D0%BA%D0%BE%D0%B4%D0%B0-%D1%81-prettier-%D0%B8-eslint-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2-ilya-pasternak
+
+https://ya.zerocoder.ru/pgt-prettier-i-kak-rabotajut-snippety-uluchshenie-kachestva-koda-i-produktivnosti-v-razrabotke/
