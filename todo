@@ -1,8 +1,8 @@
-1) on readme.md not use ru
-2) add save to database: upper (up) & lower(low) pressure, pulse (p), weight (w) 
-3) show on all page: up/low/p/w
+1) on readme.md not use ru +
+2) add save to database: upper (up) & lower(low) pressure, pulse (p), weight (w)  +
+3) show on all page: up/low/p/w +
 
-4) install extentions gitlens, todo highligth to vscode
-5) add nodemon to project
+4) install extentions gitlens, todo highligth to vscode + 
+5) add nodemon to project - 
 
-4) find errors in html code from index.html
+4) find errors in html code from index.html xz

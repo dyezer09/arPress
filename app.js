@@ -31,9 +31,14 @@ const parser = bodyParser.urlencoded({
 
 
   app.post('/', parser, (req, res) => {
-    let postDate = req.body.date;
+    let date = req.body.date;
+    let upper = req.body.upper;
+    let lower = req.body.lower;
+    let pulse = req.body.pulse;
+    let weight = req.body.weight;
+
     console.log(req.body.upper)
-    db.run('INSERT INTO dates (date) VALUES (?)', [postDate], (err) => {
+    db.run('INSERT INTO health (date, upper, lower, pulse, weight) VALUES (?,?,?,?,?)', [date, upper, lower, pulse, weight], (err) => {
       if (err) {
         console.error(err.message);
       }
@@ -51,13 +56,13 @@ const parser = bodyParser.urlencoded({
   app.get('/all', parser, (req, res) => {
     str = ""
     str1 = ""
-    db.all('SELECT * FROM dates', [], (err, rows) => {
+    db.all('SELECT * FROM health', [], (err, rows) => {
       if (err) {
         console.error(err.message);
       }
       rows.forEach((row) => {
        // console.log(row);
-        str1 = row.date;
+        str1 =  row.date + " " + row.upper + " " + row.lower + " " + row.pulse + " " + row.weight;
         str=str+str1+"<hr>"
        // console.log(str);
       });
