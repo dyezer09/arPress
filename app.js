@@ -20,18 +20,19 @@ const parser = bodyParser.urlencoded({
 });
 
 
-
-
-
-
-
-
   app.get('/', parser, (req, res) => {
     res.sendFile(__dirname + "/pages/index.html");
   })
 
+
+
+
+
+
+
   app.post('/', parser, (req, res) => {
     let postDate = req.body.date;
+    console.log(req.body.upper)
     db.run('INSERT INTO dates (date) VALUES (?)', [postDate], (err) => {
       if (err) {
         console.error(err.message);
@@ -40,6 +41,12 @@ const parser = bodyParser.urlencoded({
     });  
     res.sendFile(__dirname + "/pages/index.html");
   })
+
+
+
+
+
+
 
   app.get('/all', parser, (req, res) => {
     str = ""
@@ -52,7 +59,7 @@ const parser = bodyParser.urlencoded({
        // console.log(row);
         str1 = row.date;
         str=str+str1+"<hr>"
-        console.log(str);
+       // console.log(str);
       });
       res.send(str);
     });
